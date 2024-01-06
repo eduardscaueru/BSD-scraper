@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  scraper:
+    image: scraper
+    environment:
+      - BACKEND_URL=http://localhost:8080
+  http-echo:
+    image: mendhak/http-https-echo:31
+    ports:
+      - "8080:8080"
+      - "8433:8433"
